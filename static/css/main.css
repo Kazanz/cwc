@@ -1,0 +1,285 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    background: #f8f8f8;
+}
+
+.django-message {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 5.5em;
+}
+
+.form-error-message {
+    color: red;
+}
+
+.checkbox-label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+button a {
+    color: white;
+}
+
+.upper-left-button {
+    float: left;
+}
+
+.upper-right-button {
+    float: right;
+}
+
+.strong-header {
+    font-weight: bold;
+}
+
+.disabled-table-row td:not(:last-child) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
+  opacity: 0.3;
+}
+
+/* ==========================================================================
+   Nav Bar
+   ========================================================================== */
+
+.navbar {
+    background-color: #F5F5F5;
+    background-image: None;
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0 2px #d7d7d7;
+    -moz-box-shadow: 0 2px #d7d7d7;
+    box-shadow: 0 2px #d7d7d7;
+}
+
+.navbar button {
+    margin: 8px 10px 0 0;
+}
+
+.navbar-brand {
+    margin: 7px 0 7px 5px;
+    padding-left: 20px;
+    font-family: "HelveticaNeue","Helvetica Neue",helvetica,Arial,sans-serif;
+    color: #666 !important;
+    font-size: 1.077em;
+    font-weight: bold;
+    text-shadow: None !important;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 0;
+}
+
+/* ==========================================================================
+   buttons
+   ========================================================================== */
+
+.btn {
+    font-weight: 600;
+}
+
+.btn-secondary {
+    color: #2c2e2f;
+    background: #e1e7eb;
+}
+.btn-secondary:hover {
+    background: #d0d7db;
+}
+
+/* ==========================================================================
+   Page Header
+   ========================================================================== */
+
+.page-header {
+    background-color: rgb(0, 180, 147);
+    margin: 0 0 0 0;
+    height: 220px;
+    color: white;
+}
+
+.page-header h1 {
+    margin: 40px 0 15px 15px;
+    font-size: 50px;
+}
+
+.page-header span {
+    font-size: 55px;
+    margin-top: 40px;
+}
+
+.page-header span.badge {
+    margin-top: 0;
+    font-size: 20px;
+    border-radius: 50px;
+    margin-top: 16px;
+    background-color: #FCFCFC;
+    width: 50px;
+    color: #2c2e2f;
+}
+
+.page-header .stats {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.page-header p {
+   font-size: 22px; 
+   margin-left: 15px;
+   color: #FCFCFC;
+}
+
+
+/* ==========================================================================
+   Main Containers
+   ========================================================================== */
+
+.container.filled .holder {
+    background-color: white;
+    margin-top: 30px;
+}
+
+.container.filled .holder .text-holder {
+    padding: 15px;
+}
+
+.text-holder h5 {
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.text-holder p {
+
+}
+
+.text-holder h6:hover {
+    color: rgb(0, 180, 147)
+}
+
+/* ==========================================================================
+   Event Dashboard
+   ========================================================================== */
+
+.dashboard {
+    margin: 30px 0 0 0;
+}
+
+.side-panel {
+    height: 650px;
+    background-color: rgb(240, 100, 111);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.main-panel {
+    height: 650px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+}
+
+.main-panel .header-box {
+   width: 100%;
+   clear: both;
+}
+
+.main-panel .header-box h3 {
+    display: inline-block;
+} 
+
+.main-panel .header-box h4 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.main-panel .header-box p {
+    float:right;
+    margin-top: 25px;
+    clear: right;
+}
+
+.large-panel {
+    clear: both;
+    margin-top: 20px;
+}
+
+.large-panel .invited .fa {
+    margin-right: 10px;
+}
+
+.invited .fa {
+    float: right;
+}
+
+.invited tr:hover {
+    cursor:pointer
+}
+
+.panel-box {
+    border-bottom: 2px solid white;
+    float:left;
+    clear:both;
+    width: 100%;
+}
+
+.panel-box h2 {
+    color: white;
+    float: left;
+}
+
+.panel-box .fa {
+    color: white;
+    margin-top: 25px;
+}
+
+.icon-number-box {
+    margin: 5px 0 0 10px;
+    float: right;
+    display: inline;
+    color: white;
+}
+
+.bottom span.fa{
+    color: #2c2e2f;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 30px
+}
+
+.bottom span.fa:hover {
+    color: rgb(0, 180, 147);
+    cursor: pointer;
+}
+
+.bottom .fa {
+    cursor: pointer;
+}
+
+.guest-list .fa-thumbs-up {
+    color: rgb(0, 180, 147);
+}
+
+.guest-list .fa-thumbs-down {
+    color: rgb(180, 0, 0);
+}
+
+input[name="search"] {
+    float:right;
+    width: 200px;
+    margin-top: -52px;
+}

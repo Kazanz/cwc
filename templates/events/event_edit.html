@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script>
+    var DAYS = {% if event and event.days_json|safe %}{{ event.days_json|safe }}{% else %}0{% endif %};
+    var TIME = {% if event and event.time_json|safe %}{{ event.time_json|safe }}{% else %}0{% endif %};
+    var OCCURANCE = {% if event and event.occurance_json|safe %}{{ event.occurance_json|safe }}{% else %}0{% endif %}; 
+</script>
+{% endblock  %}
+
+{% block body %}
+    <div class="container" ng-app="eventApp">
+
+      <script type="text/ng-template" id="day_picker.html">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4>Event Day and Time</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-2">
+                    <label for="day" class="control-label col-xs-2">Day</label>
+                </div>
+                <div class="col-xs-10">
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button ng-click="dayClick(1)" type="button" class="btn btn-default" ng-class="{active: day == 1}">Sunday</button>
+                      <button ng-click="dayClick(2)" type="button" class="btn btn-default" ng-class="{active: day == 2}">Monday</button>
+                      <button ng-click="dayClick(3)" type="button" class="btn btn-default" ng-class="{active: day == 3}">Tuesday</button>
+                      <button ng-click="dayClick(4)" type="button" class="btn btn-default" ng-class="{active: day == 4}">Wednesday</button>
+                      <button ng-click="dayClick(5)" type="button" class="btn btn-default" ng-class="{active: day == 5}">Thursday</button>
+                      <button ng-click="dayClick(6)" type="button" class="btn btn-default" ng-class="{active: day == 6}">Friday</button>
+                      <button ng-click="dayClick(7)" type="button" class="btn btn-default" ng-class="{active: day == 7}">Saturday</button>
+                      <input type="hidden" id="days" name="days" value='{$ day $}'>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-2">
+                    <label for="time" class="control-label col-xs-2">Time</label>
+                </div>
+                <div class="col-xs-4">
+                      <input type="time" id="time" name="time">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4>Days Prior to Send Invite</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-2">
+                    <label for="invite_day" class="control-label col-xs-2">Days</label>
+                </div>
+                <div class="col-xs-4">
+                      <input type="number" min="1" max="6" id="invite_day" name="invite_day">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-2">
+                    <label for="invite_time" class="control-label col-xs-2">Time</label>
+                </div>
+                <div class="col-xs-4">
+                      <input type="time" id="invite_time" name="invite_time">
+                </div>
+            </div>
+        </div>
+      </script>
+
+
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Create Event</h2>
+
+          <form ng-controller="eventCtrl" class="form-horizontal" method="POST" action="{% url 'event-edit' pk %}">{% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <label for="{{ field.label }}" class="control-label col-xs-2">{{ field.label }}</label>
+                        </div>
+                        <div class="col-xs-4">
+                            {{ field }}
+                        </div>
+                        <div class="col-xs-4">
+                            <span class="form-error-message">{{ field.errors }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+                <day-picker ng-hide="(occurance == undefined || occurance == '')" occurance="occurace"></day-picker>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-10">
+                            <button type="submit" class="btn btn-success">Update Event</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+
+      <hr>
+
+<script>
+$(document).ready(function () {
+    $('option[value="{{ event.occurance|escapejs }}"]').attr('selected', 'selected')
+    $('#time').attr('value', TIME);
+});
+</script>
+{% endblock %}
+
+{% block footer %}
+        <p>&copy; Company 2014</p>
+{% endblock %}
