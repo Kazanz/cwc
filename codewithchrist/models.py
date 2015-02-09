@@ -13,6 +13,6 @@ class SignUpData(models.Model):
     phone_number = models.CharField(max_length=255, validators=[phone_regex], blank=True) # validators should be a list
 
     def __unicode__(self):
-        return self.first + " " + self.last
+        return self.first_name + " " + self.last_name
 
 admin.site.register(SignUpData)
