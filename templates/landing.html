@@ -101,7 +101,7 @@ video { display: block; }
             </div>
             <div class="col-md-6">
               <h2>How?</h2>
-              <p>To be a student in Code with Christ your only requirement is to have your own Laptop computer and to make the commitment to four days a week.  To signup for Code with Christ click the signup button below.  The maximum class size will be 15 students.  Students who can commit the proper time will be enrolled first.  
+              <p>To be a student in Code with Christ your only requirement is to have your own Laptop computer and to make the commitment to four days a week.  To signup for Code with Christ click the signup button below.  The maximum class size will be 15 students.  Students who can commit the proper time will be enrolled first. If you need a laptop we suggest getting a used laptop computer from Amazon. 
             </div>
           </div>
           <div class="row">
@@ -112,7 +112,7 @@ video { display: block; }
         </div>
         {% else %}
         <div class="container">
-            <h6>Sign Up for April Classes</h6><br>
+            <h2>Sign Up for April Classes</h2><br>
             <form method="POST" action="{% url 'sign-up-form' %}">{% csrf_token %}
             {% for field in form %}
                 <div class="row"><div class="col-md-3">{{ field.label }}:</div>
