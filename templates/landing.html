@@ -87,21 +87,21 @@ video { display: block; }
           <div class="row">
             <div class="col-md-6">
               <h2>What?</h2>
-              <p>Jesus came to offer God's abundant life to every person.  Our mission is the same.  Code with Christ is a class to help people serve the church, community and world. In this class you will learn how to skill.  A valuable, in demand skill that can help you impact your persnal, work, communal, and spiritual life. At the end of this class you will have all the knowledge and ability to build a web application like Facebook or Google.</p>
+              <p>Jesus came to offer God's abundant life to every person.  Our mission is the same.  Code with Christ is a class to help people serve the church, community and world. In this class you will learn how to build a web application like Facebook or Google.  You will learn Python, Javascript, Django, HTML, CSS, Angular, Postgres and more.  Coding is a valuable, in demand skill that we hope will impact your personal, work, communal, and spiritual life.</p>
             </div>
             <div class="col-md-6">
               <h2>Where?</h2>
-              <p>Classes will be held at <a target="_blank" href="http://www.tampafirstnaz.org/">Tampa First Church of the Nazarene.</a>  Tampa First Church of the Nazerene is a Multi-Cultural Church dedicated to representing Christ in our community and world.  Our Church's mission is to help people know and grow tith Christ.  By offering services like Code with Christ we hope to share the amazing gift of God's love and kindness with our community. 
+              <p>Classes will be held at <a target="_blank" href="http://www.tampafirstnaz.org/">Tampa First Church of the Nazarene.</a>  Tampa First Church of the Nazerene is a Multi-Cultural Church dedicated to representing Christ in our community and world.  Our Church's mission is to help people know and grow with Christ.  By offering services like Code with Christ we hope to share the amazing gift of God's love and kindness with our community. 
            </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <h2>When?</h2>
-              <p>Code with Christ will be held in late April for 3 hours, 4 days a week starting at 6pm.  The class will last for 10 weeks so that the students have all the nesessary experience and resume to get a coding job.
+              <p>Code with Christ will be held in late April for 3 hours, 4 days a week starting at 6pm (Monday, Tuesday, Thursday, Friday).  The class will last for 10 weeks so that the students have all the nesessary experience and resume to get a coding job.
             </div>
             <div class="col-md-6">
               <h2>How?</h2>
-              <p>To be a student in Code with Christ your only requirement is to have your own Laptop computer and to make the commitment to four days a week.  To signup for Code with Christ click the signup button below.  The maximum class size will be 15 students.  Students who can commit the proper time will be enrolled first.  
+              <p>To be a student in Code with Christ your only requirement is to have your own Laptop computer and to make the commitment to four days a week.  To signup for Code with Christ click the signup button below.  The maximum class size will be 15 students.  Students who can commit the proper time will be enrolled first. If you need a laptop we suggest getting a used laptop computer from Amazon. 
             </div>
           </div>
           <div class="row">
@@ -118,7 +118,7 @@ video { display: block; }
         </div>
         {% else %}
         <div class="container">
-            <h6>Sign Up for April Classes</h6><br>
+            <h2>Sign Up for April Classes</h2><br>
             <form method="POST" action="{% url 'sign-up-form' %}">{% csrf_token %}
             {% for field in form %}
                 <div class="row"><div class="col-md-3">{{ field.label }}:</div>

@@ -22,7 +22,7 @@ def sign_up_form(request):
         if form.is_valid():
             form.save()
             msg = "Thank you for signing up!  \
-                We will be sending you updates to prepare you for class."
+                We will be sending you information on how to prepare for class."
             messages.success(request, msg)
             return redirect('landing')
     context = {

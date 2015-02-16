@@ -3,7 +3,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -19,7 +19,6 @@ INSTALLED_APPS = (
     # Project Apps
     'codewithchrist',
     # Third Party Apps
-    'pipeline',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,47 +99,9 @@ STATICFILES_DIRS = (
 )
 # List of finder classes that know how to find static files in various locations.
 STATICFILES_FINDERS = (
-    'pipeline.finders.PipelineFinder',
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-PIPELINE_ENABLED = False
-PIPELINE_DISABLE_WRAPPER = True
-
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.cssmin.CSSMinCompressor'
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.jsmin.JSMinCompressor'
-
-PIPELINE_CSS = {
-    'site': {
-        'source_filenames': (
-            'css/bootstrap.min.css',
-            'css/bootstrap-theme.min.css',
-            'css/main.css',
-        ),
-        'output_filename': 'site.min.css',
-    }
-}
-
-PIPELINE_JS = {
-    'top-js': {
-        'source_filenames': (
-            'js/vendor/modernizr-2.6.2-respond-1.1.0.min.js',
-            'js/jquery-2.1.1.min.js',
-            'js/angular.min.js',
-        ),
-        'output_filename': 'base.min.js',
-    },
-    'bottom-js': {
-        'source_filenames': (
-            'js/vendor/bootstrap.min.js',
-            'js/main.js',
-        ),
-        'output_filename': 'base.min.js',
-    }
-}
-
 
 ############
 # MESSAGES #
