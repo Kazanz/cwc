@@ -9,6 +9,7 @@
     font-family: 'Bitter', serif;
     font-size: 2em;
     margin: 0 0 0 0;
+    background: None;
 }
 
 .jumbotron h1 {
@@ -72,7 +73,8 @@ video { display: block; }
 {% block body %}
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron" style="height: 100vh; background-image: url({% static 'images/macbook-dark.jpg' %}); background-size: 100%;">
+ <!--background-image: url({% static 'images/macbook-dark.jpg' %}); background-size: 100%;-->
+    <div class="jumbotron" style="height: 100vh;">
         {% if not form %}
         <div class="container">
             <center>
