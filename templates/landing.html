@@ -56,6 +56,10 @@ input {
 h2 {
     color: #FFD041;
 }
+
+li {
+font-size: 16px;
+}
 </style>
 
 <!--[if lt IE 9]>
@@ -78,7 +82,7 @@ video { display: block; }
         {% if not form %}
         <div class="container">
             <center>
-            <img style="width: 5em;" src="{% static 'images/codewithchrist.png' %}" alt="Code with Christ"><br>
+            <img style="width: 4em;" src="{% static 'images/codewithchrist.png' %}" alt="Code with Christ"><br>
           <h1>Learn to Code</h1>
           <h6>Start an exciting career that lasts.</h6>
       </center>
@@ -87,37 +91,58 @@ video { display: block; }
         <div class="container">
           <!-- Example row of columns -->
           <div class="row">
-            <div class="col-md-6">
-              <h2>What?</h2>
-              <p>Jesus came to offer God's abundant life to every person.  Our mission is the same.  Code with Christ is a class to help people serve the church, community and world. In this class you will learn how to build a web application like Facebook or Google.  You will learn Python, Javascript, Django, HTML, CSS, Angular, Postgres and more.  Coding is a valuable, in demand skill that we hope will impact your personal, work, communal, and spiritual life.</p>
-            </div>
-            <div class="col-md-6">
-              <h2>Where?</h2>
-              <p>Classes will be held at <a target="_blank" href="http://www.tampafirstnaz.org/">Tampa First Church of the Nazarene.</a>  Tampa First Church of the Nazerene is a Multi-Cultural Church dedicated to representing Christ in our community and world.  Our Church's mission is to help people know and grow with Christ.  By offering services like Code with Christ we hope to share the amazing gift of God's love and kindness with our community. 
-           </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <h2>When?</h2>
-              <p>Code with Christ will be held in late April for 3 hours, 4 days a week starting at 6pm (Monday, Tuesday, Thursday, Friday).  The class will last for 10 weeks so that the students have all the nesessary experience and resume to get a coding job.
-            </div>
-            <div class="col-md-6">
-              <h2>How?</h2>
-              <p>To be a student in Code with Christ your only requirement is to have your own Laptop computer and to make the commitment to four days a week.  To signup for Code with Christ click the signup button below.  The maximum class size will be 15 students.  Students who can commit the proper time will be enrolled first. If you need a laptop we suggest getting a used laptop computer from Amazon. 
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-                <h2>Requirements</h2>
-                <p>You must have your own laptop computer.  There is a donation fee of $10 each week ($100 up front) that goes to the Church for the facilities. Thats It!  Signup below and we will get in touch with come the end of March.</p>
-            </div>
-          </div>
-          <div class="row">
             <div class="col-md-12">
                 <center><p><a class="btn btn-primary" href="{% url 'sign-up-form' %}" role="button">Sign Up Now</a></p></center>
             </div>
           </div>
-        </div>
+ 
+          <div class="row">
+            <div class="col-md-6">
+              <h2>CLASSES</h2>
+		<ul>
+		  <li>Learn the programming language Python in just a few weeks.</li>
+		  <li>Learn the Django framework that powers Instagram and NASA.</li>
+		  <li>Explore popular Javascript MVC frameworks.</li>
+		  <li>Develop an enterprise ready app with your classmates for the church.</li>
+		  <li>Get help finding an entry level developer position.</li>
+		</ul>
+
+	      <h2>LEARN</h2>
+
+        	<div class="container">
+          	    <div class="row">
+            		<div class="col-md-6"> <ul><li>Python</li><li>Django</li><li>Git</li><li>Javascript</li><li>AngularJS</li> </ul> </div>
+			<div class="col-md-6"> <ul><li>jQuery</li><li>Html</li><li>CSS</li><li>PostgreSQL</li><li>and more.</li></ul></div>
+                    </div>
+	        </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+		<h2>REQUIREMENTS</h2>
+                  <ul>
+		    <li>Ages 16 and up</li>
+                    <li>Have your own Laptop computer</li>
+                    <li>A $10 weekly fee</li>
+                 </ul>
+               <h2>DATES</h2>
+                 <p>April 16th - June 25th, 2015<br><br>Monday, Tuesday, Thursday from 6:00 - 9:30pm.<br>Sunday from 1:30 - 4:00pm</p>
+               <h2>LOCATION</h2>
+		 <p>Tampa First Chruch of the Nazarene<br>5902 N Himes Ave, Tampa, FL 33614<br>(813) 879-0505</p>
+           </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <img style="margin-top:25px; height: 230px; margin-bottom: 140px;" src="https://avatars1.githubusercontent.com/u/7441147?v=3&s=460" alt="Zach"/>
+	    </div>
+            <div class="col-md-9">
+                <h2>INSTRUCTOR</h2>
+		<p>Zachary Kazanski is a self taught web developer and has experience working web technologies.  Zach took himself from zero development knowledge to a full time developer position in 3 months.  He wants to help you do the same.<br><br>
+		   He is currently a software developer at one of the countries premier datacenters.  Zach started his programming career in Brooklyn, New York and has experience with a wide range of web technologies including:<br><br>
+		   Python, Django, Flask, MySQL, Postgres, Redis, Saltstack, Openstack, Docker, Fig, Vagrant, Proxmox, Javascript, AngularJS, ReactJS, jQuery, Less, CSS, HTML, Java, and Android.</p>
+            </div>
+          </div>
+       </div>
         {% else %}
         <div class="container">
             <h2>Sign Up for April Classes</h2><br>
