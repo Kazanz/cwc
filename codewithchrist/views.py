@@ -7,10 +7,8 @@ from ratelimit.decorators import ratelimit
 
 
 def landing(request):
-    context = {
-        'form': False,
-    }
-    return render(request, 'landing.html', context)
+    context = {}
+    return render(request, 'index.html', context)
 
 
 @ratelimit(key='ip', rate='10/h')
