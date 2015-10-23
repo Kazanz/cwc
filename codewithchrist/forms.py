@@ -1,6 +1,6 @@
 from django import forms
 
-from codewithchrist.models import SignUpData
+from codewithchrist.models import SignUpData, Course
 
 
 class SignUpForm(forms.ModelForm):

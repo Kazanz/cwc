@@ -124,6 +124,8 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 # LOCAL SETTINGS LOADER #
 #########################
 
+SECRET_KEY = "OH SO SECRET"
+
 DEBUG_APPS = None
 try:
     from codewithchrist.local_settings import *
